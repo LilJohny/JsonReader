@@ -1,7 +1,7 @@
 import json
 import os
 import fire
-from Commands.commands import cd, ls, print_value
+from commands import cd, ls, print_value
 
 
 def main():
@@ -29,9 +29,9 @@ def main():
             print_value(data, command)
         elif command.split(' ')[0] == 'cd':
             temp, directory = command.split(' ')
-            working_directory += f'/{directory}'
             try:
                 data = cd(data, directory)
+                working_directory += f'/{directory}'
             except KeyError:
                 print('This directory doesn`t exists')
         else:

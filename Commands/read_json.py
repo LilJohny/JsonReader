@@ -1,10 +1,12 @@
 import json
 import os
-import fire
 from commands import cd, ls, print_value
 
 
 def main():
+    '''Thif cuntion performs reading .json file
+    '''
+
     file_name = input('Type the filename to read: ')
     show_help = input('Do you want to see help (commands list) Yes/No(yes/no)? :')
     if show_help.lower()[0] == 'y':

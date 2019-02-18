@@ -2,7 +2,10 @@ import requests
 import json
 
 
-def main():    
+def main(): 
+    '''This function takes input fromuser and downloads requested file
+    '''
+
     file_name = input('Type name of file to save json response: ')
     url = "https://api.twitter.com/1.1/friends/list.json"
     user = input('Type twitter username: ')
